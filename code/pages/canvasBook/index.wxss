@@ -1,0 +1,21 @@
+page {
+    background-color: #ffffff;
+    min-height: 100%;
+}
+.canvas {
+    background-color: transparent;
+    z-index: 1;
+}
+.book-answer {
+    position: absolute;
+    top: 450rpx;
+    left: 225rpx;
+    overflow: hidden;
+    width: 370rpx;
+    height: 100rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 60rpx;
+    color: green;
+    z-index: 1;
+}

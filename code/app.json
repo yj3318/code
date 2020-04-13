@@ -1,0 +1,23 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/iconScroll/index",
+        "pages/im/index",
+        "pages/swiper/index",
+        "pages/canvasBook/index",
+        "pages/chatbot/index",
+        "pages/compressImage/index",
+        "pages/numberScroll/index",
+        "pages/popAnimation/index",
+        "pages/cutdown/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "plugins": {},
+    "requiredBackgroundModes": ["audio"],
+    "sitemapLocation": "sitemap.json"
+}

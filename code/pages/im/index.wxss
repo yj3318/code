@@ -1,0 +1,146 @@
+button {
+    border-radius: 0;
+    border: 0 none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+button::after {
+    border: 0 none;
+}
+
+.im-wrap {
+    display: blok;
+}
+/* 输入区域 */
+.im-wrap .im-form {
+    display: block;
+    height: 100rpx;
+    width: 100%;
+    background-color: #dcdcdc;
+}
+.im-wrap .im-form button{
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    padding: 10rpx;
+    box-sizing: border-box;
+}
+.im-wrap .im-form .im-input {
+    display: flex;
+    padding-right: 100rpx;
+    background-color: #ffffff;
+    height: 80rpx;
+    justify-content: flex-start;
+    align-items: center;
+}
+.im-wrap .im-form .im-input input {
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #333333;
+    font-size: 26rpx;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+.im-wrap .im-form .im-selection {
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    border-left: 1rpx solid #dcdcdc
+}
+.im-wrap .im-form .im-selection .icon::before {
+    content: '\e69a';
+    font-size: 50rpx;
+    line-height: 100rpx;
+    color: #cccccc;
+}
+
+/* 聊天区域 */
+.im-scroll .im-scroll-wrap {
+    display: block;
+    overflow: hidden;
+}
+.im-scroll .split {
+    display: block;
+    margin: 10rpx 0;
+    width: 40%;
+}
+/* 图片 */
+.im-scroll .img {
+    overflow: hidden;
+    clear: both;
+}
+.im-scroll .img image {
+    display: block;
+    height: 0;
+    float: left;
+    background-color: blue;
+}
+.im-scroll .img.my image {
+    float: right; 
+}
+/* 文本 */
+.im-scroll .txt-wrap {
+    overflow: hidden;
+    clear: both;
+}
+.im-scroll .txt-wrap {
+    display: block;
+    float: left;
+    background-color: green;
+}
+.im-scroll .txt-wrap.my {
+    float: right;
+    text-align: right;
+}
+.im-scroll .im-scroll-bottom {
+    display: block;
+    height: 1rpx;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+}
+/* 机器人 */
+.im-scroll .robot-wrap {
+    overflow: hidden;
+    clear: both;
+    background-color: yellow;
+    color: #333333;
+    font-size: 30rpx;
+    line-height: 32rpx;
+}
+.im-scroll .robot-wrap .robot-title {
+    color: #ff463c;
+    font-weight: bold;
+    border-bottom: 1rpx solid #dddddd;
+    padding-bottom: 10rpx;
+}
+.im-scroll .robot-wrap .robot-question {
+    font-size: 26rpx;
+    line-height: 28rpx;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+.im-scroll .robot-wrap .robot-question-li {
+    font-size: 24rpx;
+    color: blue;
+}
+.im-scroll .robot-wrap .satisfaction {
+    margin-top: 20rpx;
+    font-size: 24rpx;
+    line-height: 26rpx;
+    padding-bottom: 10rpx;
+    border-bottom: 1rpx solid #dddddd;
+}
+.im-scroll .robot-wrap .guess {
+   font-size: 24rpx;
+   line-height: 26rpx;
+   margin-top: 10rpx;
+}

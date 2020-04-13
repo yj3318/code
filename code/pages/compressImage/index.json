@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "canvas压缩图片",
+  "usingComponents": {
+    "compress-image": "../../component/compressImage/index"
+  }
+}

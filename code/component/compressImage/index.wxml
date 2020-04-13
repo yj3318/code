@@ -1,0 +1,4 @@
+<!-- 压缩图片组件开始 -->
+<!-- 通过设置left和top值确保图片不会显示在可视范围内。一定要设置 canvas-id，这是canvas绘图和导出图片必备的属性。 -->
+<canvas class="compress-canvas" canvas-id="{{canvasId}}" style="width:{{canvasW}}px;height:{{canvasH}}px;position:absolute;left:-10000px;top:-10000px;"></canvas>
+<!-- 压缩图片组件结束 -->

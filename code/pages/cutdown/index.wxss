@@ -1,0 +1,41 @@
+.cutdown {
+    display: block;
+    margin: 10rpx;
+    color: #333333;
+    font-size: 24rpx;
+    line-height: 30rpx;
+}
+.cutdown .cutdown-li {
+    padding: 5rpx 0;
+}
+.cutdown .cutdown-li .text {
+    font-weight: bold;
+}
+.btn {
+    display: block;
+    margin-top: 20rpx;
+    overflow: hidden;
+    border-top: 1px solid #ff463c;
+    border-bottom: 1px solid #ff463c;
+    position: relative;
+}
+.btn::after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    font-size: 0;
+    position: absolute;
+    display: block;
+    background-color: #ff463c;
+    left: 50%;
+    top: 0;
+}
+.btn .start,.btn .stop {
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    font-size: 26rpx;
+    font-weight: bold;
+    line-height: 100rpx;
+}

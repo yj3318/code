@@ -1,0 +1,86 @@
+.pop-animation {
+    display: block;
+}
+
+.pop-animation .float-icon {
+    display: block;
+    width: 140rpx;
+    height: 140rpx;
+    position: fixed;
+    right: 20rpx;
+    bottom: 160rpx;
+    transform: scale(0,0);
+    opacity: 0;
+    transition: all 0.5s linear 0.2s;
+    padding-top: constant(safe-area-inset-top); /* 为导航栏+状态栏的高度 88px */
+    padding-top: env(safe-area-inset-top); /* 为导航栏+状态栏的高度 88px */
+    padding-left: constant(safe-area-inset-left); /* 如果未竖屏时为0 */
+    padding-left: env(safe-area-inset-left); /* 如果未竖屏时为0 */
+    padding-right: constant(safe-area-inset-right); /* 如果未竖屏时为0 */
+    padding-right: env(safe-area-inset-right); /* 如果未竖屏时为0 */
+    padding-bottom: constant(safe-area-inset-bottom); /* 为底下圆弧的高度 34px */
+    padding-bottom: env(safe-area-inset-bottom); /* 为底下圆弧的高度 34px */
+}
+.pop-animation .float-icon.animate {
+    transform: scale(1,1);
+    opacity: 1;
+}
+.pop-animation .float-icon image {
+    display: block;
+    width: 100%;
+}
+
+.pop-animation .pop-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1,1);
+}
+.pop-animation .pop-wrap.animate {
+    animation: scaleTo 0.5s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes scaleTo {
+    from {
+        top: 0;
+        left: 0;
+        transform: scale(1,1);
+    }
+    to {
+        top: calc(50% - 230rpx); /* 悬停按钮bottom+悬停按钮高度的一半 */
+        top: calc(50% - 230rpx + constant(safe-area-inset-bottom));
+        top: calc(50% - 230rpx + env(safe-area-inset-bottom));
+        left: calc(50% - 70rpx); /* 悬停ICON宽度的一半 */
+        transform: scale(0,0);
+    }
+}
+.pop-animation .pop-wrap .pop {
+    display: block;
+    position: relative;
+    width: 508rpx;
+}
+.pop-animation .pop-wrap .pop .pop-close {
+    display: block;
+    position: absolute;
+    top: -80rpx;
+    right: 0;
+    overflow: hidden;
+}
+.pop-animation .pop-wrap .pop .pop-close image {
+    display: block;
+    width: 60rpx;
+    height: 60rpx;
+}
+.pop-animation .pop-wrap .pop .pop-content {
+    display: block;
+}
+.pop-animation .pop-wrap .pop .pop-content image {
+    display: block;
+    width: 100%;
+}

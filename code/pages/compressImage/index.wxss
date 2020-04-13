@@ -1,0 +1,97 @@
+.compress-image-wrap {
+    display: block;
+}
+.compress-image-wrap .choose-image {
+    display: block;
+    height: 50rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    border-radius: 10rpx;
+    border: 1rpx solid #ff463c;
+    color: #ff463c;
+    font-size: 28rpx;
+    text-align: center;
+    margin: 10rpx;
+}
+.compress-image-wrap .tips {
+    display: block;
+    color: #a4a4a4;
+    font-size: 24rpx;
+    padding: 10rpx;
+    text-align: center;
+}
+/* 原图 */
+.compress-image-wrap .original-image {
+    display: block;
+    margin-top: 40rpx;
+}
+.compress-image-wrap .original-image .title {
+    display: block;
+    padding: 10rpx;
+    font-size: 36rpx;
+    line-height: 40rpx;
+    color: #000000;
+    font-weight: bold;
+}
+.compress-image-wrap .original-image .detail {
+    display: block;
+    padding: 10rpx;
+    font-size: 26rpx;
+    line-height: 30rpx;
+    color: #222222;
+}
+.compress-image-wrap .original-image .img {
+    display: block;
+    width: 100%;
+    margin-top: 10rpx;
+}
+.compress-image-wrap .original-image {
+    display: block;
+    margin-top: 40rpx;
+}
+.compress-image-wrap .original-image .title {
+    display: block;
+    padding: 10rpx;
+    font-size: 36rpx;
+    line-height: 40rpx;
+    color: #000000;
+    font-weight: bold;
+}
+.compress-image-wrap .original-image .detail {
+    display: block;
+    padding: 10rpx;
+    font-size: 26rpx;
+    line-height: 30rpx;
+    color: #222222;
+}
+.compress-image-wrap .original-image .img {
+    display: block;
+    width: 100%;
+    margin-top: 10rpx;
+}
+
+/* 压缩图 */
+.compress-image-wrap .compress-image {
+    display: block;
+    margin-top: 40rpx;
+}
+.compress-image-wrap .compress-image .title {
+    display: block;
+    padding: 10rpx;
+    font-size: 36rpx;
+    line-height: 40rpx;
+    color: #000000;
+    font-weight: bold;
+}
+.compress-image-wrap .compress-image .detail {
+    display: block;
+    padding: 10rpx;
+    font-size: 26rpx;
+    line-height: 30rpx;
+    color: #222222;
+}
+.compress-image-wrap .compress-image .img {
+    display: block;
+    width: 100%;
+    margin-top: 10rpx;
+}

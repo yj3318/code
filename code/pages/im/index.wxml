@@ -1,0 +1,41 @@
+<view class="im-wrap">
+    <scroll-view class="im-scroll" scroll-y="{{true}}" scroll-with-animation="{{imData.scrollAnimation}}" style="height:{{imData.imHeight}}px;" bindscrolltoupper="getHistory" scroll-into-view="{{imData.imScrollJump}}">
+        <view class="im-scroll-wrap">
+            <block wx:for="{{imPageData}}" wx:key="index" wx:if="{{imPageData && imPageData.length > 0}}">
+                <!-- 图片开始 -->
+                <view id="{{item.anchor}}" class="split img{{item.who === 'my' ? ' my' : ''}}" data-sendtime="{{item.sendTime}}" data-sort="{{index}}" data-seq="{{item.who === 'my' && item.seq ? item.seq : ''}}" bindlongpress="repealInfo" wx:if="{{item.module && item.module === 'img'}}"><image src="{{item.data}}" mode="widthFix" /></view>
+                <!-- 图片结束 -->
+                <!-- 文本开始 -->
+                <view id="{{item.anchor}}" class="split txt-wrap{{item.who === 'my' ? ' my' : ''}}" data-sendtime="{{item.sendTime}}" data-sort="{{index}}" data-seq="{{item.who === 'my' && item.seq ? item.seq : ''}}" bindlongpress="repealInfo" wx:elif="{{item.module && item.module === 'txt'}}"><view class="txt">{{item.data}}</view></view>
+                <!-- 文本结束 -->
+                <!-- 机器人开始 -->
+                <view id="{{item.anchor}}" class="split robot-wrap" data-sendtime="{{item.sendTime}}" data-sort="{{index}}" wx:elif="{{item.module && item.module === 'robot'}}">
+                    <block wx:if="{{item.data.msgtype == 'text'}}">
+                        <view class="robot-title">{{item.data.text && item.data.text.content || ''}}</view>
+                        <view class="robot-question">
+                            <text class="before">{{item.data.recommendQuestion.beforeWord}}</text>
+                            <text class="after">{{item.data.recommendQuestion.afterWord}}</text>
+                        </view>
+                        <view class="robot-question-li" wx:for="{{item.data.recommendQuestion.list}}" wx:for-index="k" wx:for-item="v" wx:key="k" wx:if="{{item.data.recommendQuestion.list.length > 0}}">{{v.seq}}.{{v.question}}</view>
+                        <view class="satisfaction" wx:if="{{item.data.satisfaction}}">{{item.data.satisfaction}}</view>
+                        <view class="guess" wx:if="{{item.data.text && item.data.text.content}}">{{item.data.text.content}}</view>
+                    </block>
+                </view>
+                <!-- 机器人结束 -->
+            </block>
+        </view>
+        <view class="im-scroll-bottom" id="anchorButton"></view>
+    </scroll-view>
+    <form report-submit="{{true}}" bindsubmit="submitIM" class="im-form">
+        <button hover-class="none" form-type="submit">
+            <view class="im-input">
+                <input placeholder="{{imData.placeholder}}" value="{{imData.value}}" bindconfirm="submitIM" />
+            </view>
+            <view class="im-selection" catchtap="selectImage"><text class="iconfont icon"></text></view>
+        </button>
+    </form>
+</view>
+<!-- 登录开始 -->
+<!--<import src="../../component/login/login.wxml" />
+<template is="login" data="{{...loginData}}"/>-->
+<!-- 登录结束 -->

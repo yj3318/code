@@ -1,0 +1,18 @@
+<view class="compress-image-wrap">
+    <view class="choose-image" bindtap="chooseImage">请选择图片</view>
+    <text class="tips">**gif动图压缩后会没有动画效果**</text>
+    <view class="original-image" wx:if="{{originalImage.url}}">
+        <text class="title">原图</text>
+        <text class="detail">尺寸：{{originalImage.width}}*{{originalImage.height}}</text>
+        <text class="detail">大小：{{originalImage.size}}字节</text>
+        <image lazy-load="{{true}}" src="{{originalImage.url}}" mode="widthFix" class="img"></image>
+    </view>
+    <view class="compress-image" wx:if="{{compressImage.url}}">
+        <text class="title">压缩图</text>
+        <text class="detail">尺寸：{{compressImage.width}}*{{compressImage.height}}</text>
+        <text class="detail">大小：{{compressImage.size}}字节</text>
+        <image lazy-load="{{true}}" src="{{compressImage.url}}" mode="widthFix" class="img"></image>
+    </view>
+
+    <compress-image id="compress-image" file-path="{{originalImage && originalImage.url ? originalImage.url : ''}}" canvas-h="{{canvasH}}" canvas-w="{{canvasW}}" canvas-id="canvas-compress-image" bind:compressSuccess="compressSuccess" bind:compressFail="compressFail"></compress-image>
+</view>

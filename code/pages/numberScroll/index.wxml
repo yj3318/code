@@ -1,0 +1,13 @@
+<view class="number-scroll">
+    <view class="number-wrap" wx:for="{{number}}" wx:key="index">
+        <view class="number-list{{isAnimate ? ' animate' : ''}}" style="-webkit-transform:translateY(-{{item.translateY}}%);transform:translateY(-{{item.translateY}}%);">
+            <view class="number-li" wx:for="{{item.num}}" wx:for-index="k" wx:for-item="v" wx:key="k">{{v}}</view>
+        </view>
+    </view>
+</view>
+
+<form class="number-input" bindsubmit="ok">
+    <text>数值：</text>
+    <input placeholder="输入变化后的数值" type="number" name="val" bindconfirm="ok"></input>
+    <button class="btn" form-type="submit">确定</button>
+</form>

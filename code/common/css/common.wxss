@@ -1,0 +1,367 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('https://static.dangdang.com/iconfont2.4/iconfont.eot');
+    src: url('https://static.dangdang.com/iconfont2.4/iconfont.eot?#iefix.eot');
+    src: url('https://static.dangdang.com/iconfont2.4/iconfont.eot?#iefix') format('embedded-opentype'), url('https://static.dangdang.com/iconfont2.4/iconfont.woff') format('woff'), url('https://static.dangdang.com/iconfont2.4/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.global {
+    font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+    flex: 1;
+    min-height: 100%;
+    position: relative;
+}
+
+.global.empty {
+    background-color: #ffffff;
+}
+
+button::after {
+    content: none;
+    border: 0 none;
+}
+
+/* 隐藏滚动条 */
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+/* 空白页 */
+.empty{background-color:#ffffff;}
+.empty.pt{padding-top:170rpx;}
+.empty.transparent{background-color:transparent;}
+.empty .table{display:table;width:100%;height:100%;}
+.empty .table .cell{display:table-cell;vertical-align:middle;text-align:center;}
+.empty .table .cell.vertical_top{vertical-align:top;}
+.empty image{display:block;width:337rpx;height:257rpx;margin:0 auto;}
+.empty text{display:block;margin-top:30rpx;color:#888888;font-size:30rpx;text-align:center;}
+.empty .refresh{display:flex;justify-content:center;align-items:center;width:180rpx;height:70rpx;line-height:70rpx;margin:0 auto;padding:0;border:1px solid #fa5656;text-align:center;border-radius:4rpx;margin-top:30rpx;color:#fa5656;font-size:28rpx;background-color:transparent;}
+.empty .refresh image{display:inline-block;width:25rpx;height:25rpx;margin:0 10rpx 0 0;}
+.empty .skip{display:flex;justify-content:center;align-items:center;width:180rpx;height:70rpx;line-height:70rpx;margin:0 auto;padding:0;border:1px solid #fa5656;text-align:center;border-radius:4rpx;margin-top:30rpx;color:#fa5656;font-size:28rpx;background-color:transparent;}
+
+/* 没有更多加载提示 */
+.nomore {
+    color: #a0a0a0;
+    font-size: 20rpx;
+    padding-bottom: 4rpx;
+    line-height: 38rpx;
+    background-color: #efeff4;
+    text-align: center;
+    clear: both;
+}
+
+.nomore image {
+    width: 110rpx;
+}
+
+.nomore text {
+    display: block;
+    text-align: center;
+}
+
+/* 还有更多 */
+
+.hasmore {
+    color: #cbcbcb;
+    font-size: 24rpx;
+    padding-bottom: 4rpx;
+    line-height: 60rpx;
+    background-color: #efeff4;
+    clear: both;
+}
+
+.hasmore text {
+    display: block;
+    text-align: center;
+}
+
+/* 页码 */
+
+.page_number {
+    position: fixed;
+    bottom: 17rpx;
+    left: 0;
+    width: 100%;
+    height: 24rpx;
+    line-height: 24rpx;
+    font-size: 0;
+    text-align: center;
+}
+
+.page_number text {
+    display: inline-block;
+    text-align: center;
+    padding: 0 14rpx;
+    background-color: rgba(0, 0, 0, .4);
+    font-size: 18rpx;
+    color: #ffffff;
+    border-radius: 12rpx;
+}
+
+/* 溢出隐藏 */
+
+.omit {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 清除浮动 */
+
+.clearFix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col_red {
+    color: #e34037;
+}
+
+/* 快捷导航组件 */
+
+.quick_navigation .open_button {
+    width: 80rpx;
+    height: 80rpx;
+    position: fixed;
+    right: 20rpx;
+    bottom: 132rpx;
+    z-index: 11;
+    transition:right .5s;
+}
+.quick_navigation .open_button.open_icon {
+    right:-80rpx;
+}
+.quick_navigation .open_button .quick_navigation_icon{
+    display:block;
+    width:80rpx;
+    height:80rpx;
+}
+.quick_navigation .open {
+    position: fixed;
+    right: -230rpx;
+    bottom: 114rpx;
+    background: #fff;
+    z-index: 501;
+    transition: right 0.5s;
+    border-radius: 20rpx 0 0 20rpx;
+    overflow:initial;
+}
+
+.quick_navigation .open_nav {
+    right: 0;
+}
+
+.quick_navigation .open .img_contain {
+    max-width: 230rpx;
+    max-height: 480rpx;
+    padding: 12rpx 6rpx;
+    padding-bottom: 2rpx;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 103;
+}
+
+.quick_navigation .open .img_contain .nav_item {
+    width: 102rpx;
+    height: 102rpx;
+    margin-bottom: 10rpx;
+}
+
+.quick_navigation .open .img_contain .margin10 {
+    margin-right: 10rpx;
+}
+
+.quick_navigation .open .img_contain .nav_item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.quick_navigation .open .img_contain image {
+    width: 102rpx;
+    height: 102rpx;
+}
+
+.quick_navigation .open .close_button {
+    position: absolute;
+    left: -59rpx;
+    bottom: 20rpx;
+    display: none;
+    transition: display 1s;
+    z-index: 100;
+}
+
+.quick_navigation .open .disshow {
+    display: block;
+}
+
+.quick_navigation .open .close_button image {
+    width: 61rpx;
+    height: 79rpx;
+}
+
+/*促销标签*/
+
+.label_common {
+    float: left;
+    border: 1rpx solid #f2303c;
+    padding: 0 4rpx;
+    padding-top: 0;
+    box-sizing: border-box;
+    margin-right: 6rpx;
+    font-size: 22rpx;
+    color: #f2303c;
+    border-radius: 4rpx;
+    line-height: 24rpx;
+}
+.label_common:last-child{margin-right:0;}
+
+.android .label_common {
+    padding-top: 7rpx;
+}
+
+.label_common.label1 {
+    background: #f2303c;
+    color: #ffffff;
+}
+
+/* 广告样式 */
+
+.label_common.label2 {
+    color: #dfdfdf;
+    border: 1px solid transparent;
+    padding: 0;
+}
+
+/*
+    真实1px实现
+    由于用伪类实现最多两个单线条，或者一个四周1px框，
+    由于用after实现，所以如有其他伪类需求需要用before实现
+    onepx 必加
+    onepx_top 上
+    onepx_bottom 下
+    onepx_left 左
+    onepx_right 右
+    onepx_around 四周
+    如需更改边框颜色，需自己定义类名用border-color实现
+    .onepx_color::after{
+        border-color: red;
+    }
+*/
+
+.onepx {
+    position: relative;
+}
+
+.onepx::after, .onepx_before::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+.onepx_top::after {
+    border-top: 1px solid #DCDCDC;
+    width: 200%;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+
+.onepx_bottom::after {
+    border-top: 1px solid #DCDCDC;
+    width: 200%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+}
+.onepx_bottom_before::before {
+    border-top: 1px solid #DCDCDC;
+    width: 200%;
+    height: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.onepx_left::after {
+    border-left: 1px solid #DCDCDC;
+    width: 0;
+    height: 200%;
+    left: 0;
+    top: 0;
+}
+
+.onepx_right::after {
+    border-left: 1px solid #DCDCDC;
+    width: 0;
+    height: 200%;
+    right: 0;
+    top: 0;
+}
+
+.onepx_around::after {
+    border: 1px solid #DCDCDC;
+    width: 200%;
+    height: 200%;
+    left: 0;
+    top: 0;
+}
+
+/* 添加formid相关, form需要是块元素, btn取消自带样式 */
+.block-form {
+    display: block;
+}
+
+.empty-btn {
+    padding-left: 0;
+    padding-right: 0;  
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    background-color: transparent;
+    text-align: left;
+    border-radius: 0;
+    font-size: 0;
+    position: inherit;
+    color: transparent;
+    overflow: initial;
+    line-height: initial;
+}
+
+.v-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.p-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.vp-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

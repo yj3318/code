@@ -1,0 +1,78 @@
+button {
+    border-radius: 0;
+    border: 0 none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+button::after {
+    border: 0 none;
+}
+/* 入口模块 */                                                                                                                             
+.icon-wrap {
+    width: 100%;
+    height: 300rpx;
+    z-index: 5;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.icon-wrap .icon-line{
+    white-space: nowrap;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+}
+.icon-wrap form {
+    display:block;
+}
+.icon-wrap form button {
+    display: block;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.icon-wrap .icon-jump-v2 {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+}
+.icon-wrap .icon-jump-v2 .con {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.icon-wrap .icon-jump-v2 .con .icon {
+    width: 100%;
+    height: 150rpx;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.scroll-progress {
+    display: block;
+    width: 100rpx;
+    height: 15rpx;
+    border-radius: 8rpx;
+    background-color: #dfdfdf;
+    margin: 10px auto 0 auto;
+    position: relative;
+}
+.scroll-progress .current {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    border-radius: 8rpx;
+    height: 15rpx;
+}
+
+.webp {
+    display: block;
+    margin: 20rpx auto 0 auto;
+    width: 400rpx;
+}

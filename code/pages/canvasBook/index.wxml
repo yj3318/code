@@ -1,0 +1,2 @@
+<view class="book-answer" hidden="{{!isShowBookAnswer}}">{{bookAnswer}}</view>
+<canvas class="canvas" canvas-id="canvas" style="width:{{canvasW}}px;height:{{canvasH}}px;" bindtouchstart="eraserStart" bindtouchmove="eraserMove" bindtouchend="eraserEnd"></canvas>

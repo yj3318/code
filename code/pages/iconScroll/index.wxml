@@ -1,0 +1,31 @@
+<view class="icon-scroll">
+    <scroll-view class="icon-wrap" scroll-x="{{true}}" scroll-with-animation="{{true}}" wx:if="{{iconData && iconData.first && iconData.first.length > 1}}" bindscroll="iconScroll">
+        <view class="icon-line">
+            <view class="icon-jump-v2" data-url="{{item.iconLinkUrl || ''}}" data-index="{{index}}" bindtap='goToJumpIcon' wx:for="{{iconData.first}}" wx:key="rank" data-area="ICON区" data-pos="坑位{{rank}}" data-desc="{{item.iconImg}}">
+                <form report-submit="{{true}}" bindsubmit="submitFormid">
+                    <button form-type="submit">
+                        <view class="con">
+                            <image class="icon" src="{{item.iconImg}}" mode="widthFix" style="background-image:url({{item.iconImg}});"></image>
+                        </view>
+                    </button>
+                </form>
+            </view>
+        </view>
+        <view class="icon-line">
+            <view class="icon-jump-v2" data-url="{{item.iconLinkUrl || ''}}" data-index="{{index}}" bindtap='goToJumpIcon' wx:for="{{iconData.second}}" wx:key="rank" data-area="ICON区" data-pos="坑位{{rank}}" data-desc="{{item.iconImg}}">
+                <form report-submit="{{true}}" bindsubmit="submitFormid">
+                    <button form-type="submit">
+                        <view class="con">
+                            <image class="icon" src="{{item.iconImg}}" mode="widthFix" style="background-image:url({{item.iconImg}});"></image>
+                        </view>
+                    </button>
+                </form>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="scroll-progress">
+        <view class="current" style="width:{{iconData.scroll.width}}rpx;left:{{iconData.scroll.left}}rpx;"></view>
+    </view>
+</view>
+
+<image src="{{webpImage}}" class="webp" mode="widthFix" bindload="imgLoad" binderror="imgError" />

@@ -1,0 +1,32 @@
+page {
+    padding: 20rpx;
+    box-sizing: border-box;
+}
+.swiper {
+    height: 510rpx;
+}
+.swiper .swiper-li {
+    display: block;
+    position: relative;
+    overflow: initial;
+}
+.swiper .swiper-li .swiper-image {
+    display: block;
+    width: 510rpx;
+    height: 510rpx;
+    margin: 0 auto;
+}
+.swiper .swiper-li .more {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 510rpx;
+    line-height: 510rpx;
+    color: #333333;
+    text-align: center;
+    font-size: 50rpx;
+    background-color: #dcdcdc;
+}
+.swiper .swiper-li.normal .more {
+    position: static;
+}

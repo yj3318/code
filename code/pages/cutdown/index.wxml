@@ -1,0 +1,9 @@
+<view class="cutdown">
+    <view class="cutdown-li" wx:for="{{cutdownData}}" wx:key="index" wx:if="{{item}}">
+        <text class="text">{{item.days}}天{{item.hours}}小时{{item.minutes}}分钟{{item.seconds}}秒</text>
+    </view>
+</view>
+<view class="btn">
+    <view class="start" bindtap="start">开始计时</view>
+    <view class="stop" bindtap="stop">停止计时</view>
+</view>

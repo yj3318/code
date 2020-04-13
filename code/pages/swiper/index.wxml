@@ -1,0 +1,11 @@
+<swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}" circular="{{canNextMargin ? false : true}}" next-margin="{{canNextMargin ? swiperNextMargin + 'rpx' : ''}}">
+    <swiper-item class="swiper-li" wx:for="{{imgUrls}}" wx:key="index">
+        <image src="{{item}}" class="swiper-image" mode="scaleToFill"/>
+        <block wx:if="{{canNextMargin && index == imgUrls.length - 1}}">
+            <view class="more" catchtap="goToMore" style="right:{{0 - swiperNextMargin}}rpx;width:{{swiperNextMargin}}rpx;">更多</view>
+        </block>
+    </swiper-item>
+    <swiper-item class="swiper-li normal" wx:if="{{!canNextMargin}}">
+            <view class="more" catchtap="goToMore">更多</view>
+    </swiper-item>
+</swiper>

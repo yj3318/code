@@ -1,0 +1,20 @@
+<view class="pop-animation">
+    <!-- 悬浮ICON开始 -->
+    <view class="float-icon{{isClosePopFlag ? ' animate' : ''}}">
+        <image src="https://img62.ddimg.cn/upload_img/00788/1/xinxuanfu-1559289736.gif" mode="widthFix"></image>
+    </view>
+    <!-- 悬浮ICON结束 -->
+
+    <!-- 弹窗开始 -->
+    <view class="pop-wrap{{isClosePopFlag ? ' animate' : ''}}" catchtouchmove="preventTouchMove">
+        <view class="pop">
+            <view class="pop-close" catchtap="closePop">
+                <image src="https://img60.ddimg.cn/upload_img/00743/mina/close-1527822387.png" mode="scaleToFill"></image>
+            </view>
+            <view class="pop-content">
+                <image src="https://img62.ddimg.cn/ww2017/6/640-284.jpg" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
+    <!-- 弹窗结束 -->
+</view>

@@ -1,0 +1,2 @@
+<text class="title">目录</text>
+<navigator class="jump" url="{{item.url}}" hover-class="none" wx:for="{{navigator}}" wx:key="name">{{item.name}}</navigator>
