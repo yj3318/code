@@ -1,0 +1,25 @@
+<view class="navigationBar-wrap-temp" style="height:{{navH}}px;" hidden="{{!showFlag}}"></view>
+<view class="navigationBar-wrap" style="height:{{navH}}px;background:{{backgroundImage || 'none'}} {{backgroundColor || 'transparent'}} center center no-repeat;background-size:cover;z-index:{{zIndex}};" hidden="{{!showFlag}}">
+    <view class="navigationBar-area" style="height:{{navAreaH}}px;line-height:{{navAreaH}}px;margin-top:{{navAreaT}}px;padding:0 {{navAreaSideW}}px;">
+        <view class="navigationBar-btn_wrap {{mode}} {{platform}}" style="width:{{capsuleW}}px;height:{{capsuleH}}px;">
+            <view class="iconfont navigationBar-goBack" catchtap="goBack" style="height:{{capsuleInnerH}}px;line-height:{{capsuleInnerH}}px;color:{{iconColor}}"></view>
+            <block wx:if="{{menuData && menuData.length > 0}}">
+                <view class="capsule-split" style="left:{{capsuleMiddle}}px;top:{{capsuleInnerH * .2}}px;height:{{capsuleInnerH * .6}}px;"></view>
+                <view class="iconfont navigationBar-menu" catchtap="controlMenu" style="height:{{capsuleInnerH}}px;line-height:{{capsuleInnerH}}px;"></view>
+            </block>
+        </view>
+        <!-- 下拉菜单开始 -->
+        <view class="navigationBar-menu-list" style="top:{{navAreaH}}px;height:{{isShowMenu ? menuH : 0}}px;">
+            <view class="iconfont navigationBar-menu-arrow"></view>
+            <!-- 菜单数据开始 -->
+            <view class="navigationBar-menu-bg">
+                <view class="navigationBar-menu-li {{platform}} {{item.iconfont || ''}} iconfont navigationBar-menu-iconfont" data-url="{{item.url}}" data-area="自定义导航菜单区域" data-pos="菜单{{index + 1}}" data-desc="{{item.name}}" catchtap="menuJump" wx:for="{{menuData}}" wx:key="index">
+                <text class="navigationBar-menu-txt">{{item.name}}</text></view>
+            </view>
+            <!-- 菜单数据结束 -->
+        </view>
+        <!-- 下拉菜单结束 -->
+        <slot name="before"></slot>
+        <slot name="after"></slot>
+    </view>
+</view>

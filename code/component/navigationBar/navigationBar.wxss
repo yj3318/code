@@ -1,0 +1,184 @@
+/* iconfont样式，由于7.0.3以下版本无法读取父页面样式 */
+@font-face {
+    font-family: "iconfont";
+    src: url('https://static.dangdang.com/iconfont2.8/iconfont.eot');
+    src: url('https://static.dangdang.com/iconfont2.8/iconfont.eot?#iefix.eot');
+    src: url('https://static.dangdang.com/iconfont2.8/iconfont.eot?#iefix') format('embedded-opentype'), url('https://static.dangdang.com/iconfont2.8/iconfont.woff') format('woff'), url('https://static.dangdang.com/iconfont2.8/iconfont.ttf') format('truetype');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navigationBar-btn {
+    border-radius: 0;
+    border: 0 none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+.navigationBar-wrap-temp {
+    width: 100%;
+    height: 64px;
+}
+.navigationBar-wrap {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.navigationBar-area {
+    display: block;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* 左侧胶囊 */
+.navigationBar-btn_wrap {
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 87px;
+    height: 32px;
+    background: rgba(255,255,255,.60);
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+.navigationBar-btn_wrap.ios {
+    border: .5px solid rgba(0,0,0,.1);
+}
+.navigationBar-btn_wrap.android {
+    border: 1px solid #f2f2f2;
+}
+.navigationBar-btn_wrap.simple {
+    border: none;
+    background: none;
+}
+
+/* 返回 */
+.navigationBar-goBack {
+    display: block;
+    float: left;
+    width: 50%;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+}
+.navigationBar-goBack::before {
+    content: '\e66c';
+}
+
+/* 分隔 */
+.capsule-split {
+    display: block;
+    width: 1px;
+    height: 18px;
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    background-color: rgba(0,0,0,.1);
+}
+.ios .capsule-split {
+    width: .5px;
+}
+.android .capsule-split {
+    background-color: #f2f2f2;
+}
+
+/* 菜单 */
+.navigationBar-menu {
+    display: block;
+    float: right;
+    width: 50%;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    background: url(https://img60.ddimg.cn/upload_img/00610/ddshopping/navigatorBar-menu_icon-1568950856.png) center center no-repeat;
+    background-size: 16px 14px;
+}
+.navigationBar-menu-list {
+    position: absolute;
+    width: 105px;
+    padding: 0 10px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    transition: height .2s;
+    left: 26px;
+}
+.navigationBar-menu-arrow {
+    width: 16px;
+    height: 7px;
+    display: inline-block;
+    background: url(https://img63.ddimg.cn/upload_img/00610/ddshopping/navigatorBar-arrow-1568777348.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 2;
+    top: 1px;
+    left: 30px;
+}
+.navigationBar-menu-bg {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 12px 0 rgba(0,0,0,.07);
+}
+.navigationBar-menu-li {
+    display: block;
+    margin-left: 18px;
+    padding: 15px 10px 15px 30px;
+    border-bottom: 1px solid #f1f1f1;
+    position: relative;
+    line-height: 15px;
+    height: 15px;
+    overflow: hidden;
+    text-align: center;
+}
+.navigationBar-menu-li.ios {
+    padding-right: 15px;
+}
+.navigationBar-menu-li:last-child {
+    border-bottom: 0 none;
+}
+.navigationBar-menu-txt {
+    font-size: 13px;
+    color: #000000;
+}
+/* 菜单iconfong */
+.navigationBar-menu-iconfont::before {
+    position: absolute;
+    top: 12px;
+    left: 3px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #141414;
+}
+.iconfont-home::before {
+    content: '\e652';
+}
+.iconfont-search::before {
+    content: '\e65b';
+}
+.iconfont-cart::before {
+    content: '\e653';
+}
+.iconfont-my::before {
+    content: '\e656';
+}
+.iconfont-fav::before {
+    content: '\e601';
+}
+.iconfont-groupBuy::before {
+    content: '\e640';
+}
+.iconfont-couponCenter::before {
+    content: '\e64b';
+}

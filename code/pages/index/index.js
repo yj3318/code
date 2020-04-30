@@ -37,6 +37,10 @@ Page({
                 name: '倒计时组件',
                 url: '/pages/cutdown/index',
             },
+            {
+                name: '自定义导航组件',
+                url: '/pages/navigationBar/index',
+            },
         ],
     },
 })

@@ -1,0 +1,9 @@
+<!-- 自定义顶部导航开始 -->
+<navigationBar id="customNavigator" bindupdateCustomNavigatorHeight="updateCustomNavigatorHeight" title="{{productInfo.is_ebook ? '电子书' : '商品详情'}}" menu-data="{{customHeadMenuData}}">
+    <view class="iconfont icon" slot="before" catchtap="slotArrow"></view>
+    <view class="insert-view" slot="after">
+        <view class="insert-view-left" catchtap="slotLeft">slot左侧</view>
+        <view class="insert-view-right" catchtap="slotRight">slot右侧</view>
+    </view>
+</navigationBar>
+<!-- 自定义顶部导航开始 -->

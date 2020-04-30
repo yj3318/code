@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "自定义组件",
+    "navigationStyle": "custom",
+    "usingComponents": {
+        "navigationBar": "../../component/navigationBar/navigationBar"
+    }
+}

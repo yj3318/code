@@ -1,0 +1,30 @@
+page {
+    background-color: #dedede;
+}
+
+/* slot插入样式 */
+.icon {
+    display: block;
+    width: 20rpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 107px;
+}
+.icon::before {
+    content: '\e666';
+    font-size: 20rpx;
+}
+.insert-view {
+    display: block;
+    overflow: hidden;
+    margin-left: 40rpx;
+}
+.insert-view .insert-view-left {
+    display: block;
+    float: left;
+}
+.insert-view .insert-view-right {
+    display: block;
+    float: right;
+}
