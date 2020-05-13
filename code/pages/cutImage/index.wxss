@@ -1,0 +1,24 @@
+@import '../../component/cropImg/cropImg.wxss';
+.cut-wrap {
+    display: block;
+}
+.cut-wrap .cut-btn {
+    display: block;
+    border: 1rpx solid #ff463c;
+    border-radius: 16rpx;
+    line-height: 100rpx;
+    color: #ff463c;
+    font-size: 30rpx;
+    font-weight: bold;
+    text-align: center;
+    margin: 10rpx;
+}
+.cut-wrap .cut-img-wrap {
+    display: block;
+    margin: 0 10rpx;
+}
+.cut-wrap .cut-img-wrap .cut-img {
+    display: block;
+    width: 100%;
+    border-radius: 16rpx;
+}

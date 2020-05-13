@@ -10,7 +10,8 @@
         "pages/numberScroll/index",
         "pages/popAnimation/index",
         "pages/cutdown/index",
-        "pages/navigationBar/index"
+        "pages/navigationBar/index",
+        "pages/cutImage/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

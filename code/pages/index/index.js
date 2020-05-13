@@ -41,6 +41,10 @@ Page({
                 name: '自定义导航组件',
                 url: '/pages/navigationBar/index',
             },
+            {
+                name: '图片裁剪',
+                url: '/pages/cutImage/index',
+            },
         ],
     },
 })

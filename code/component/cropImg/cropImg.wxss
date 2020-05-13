@@ -1,0 +1,40 @@
+/*截图*/
+.cropper-wrapper {
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.tips {
+    position: absolute;
+    font-size: 26rpx;
+    color:#939393;
+    text-align: center;
+    left: 0;
+    bottom: 152rpx;
+    width: 100%;
+}
+.cropper-buttons {
+    position: absolute;
+    width: 660rpx;
+    height: 86rpx;
+    bottom: 33rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    overflow: hidden;
+}
+.cropper-buttons .cropper-btn {
+    width: 48%;
+    height: 100%;
+    border-radius: 86rpx;
+    text-align: center;
+    background-color: #ff463c;
+    color:#fff;
+    font-size: 32rpx;
+    line-height: 86rpx;
+    float: right;
+}
+.cropper-buttons .cropper-btn.cancel-btn {
+    background-color: #dddddd;
+    float: left;
+}

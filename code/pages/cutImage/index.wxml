@@ -1,0 +1,17 @@
+<view class="cut-wrap" hidden="{{isCutShow}}">
+    <view class="cut-btn" bindtap="uploadImg">请选择需要裁剪的图片</view>
+    <view class="cut-img-wrap" wx:if="{{img}}">
+        <image mode="widthFix" src="{{img}}" class="cut-img"></image>
+    </view>
+</view>
+<!-- 裁剪区开始 -->
+<view class="cropper-wrapper" hidden="{{!isCutShow}}">
+    <import src="../../component/cropImg/cropImg.wxml"/>
+    <template is="we-cropper" data="{{...canvasSetting}}"/>
+    <view class="tips">裁剪后图片尺寸为652*372</view>
+    <view class="cropper-buttons">
+        <view class="cropper-btn cancel-btn" bindtap="cancelCutImage">取消</view>
+        <view class="cropper-btn" bindtap="getCutImage">完成</view>
+    </view>
+</view>
+<!-- 裁剪区结束 -->
