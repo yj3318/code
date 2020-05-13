@@ -1,8 +1,7 @@
-
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.WeCropper = factory());
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global.WeCropper = factory());
 }(this, (function () { 'use strict';
 
 var device = void 0;
@@ -31,7 +30,7 @@ function validator (instance, o) {
   Object.defineProperties(instance, o);
 }
 
-function	getDevice () {
+function getDevice () {
   if (!device) {
     device = wx.getSystemInfoSync();
   }
@@ -216,172 +215,172 @@ var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 
 
 
 function createCommonjsModule(fn, module) {
-	return module = { exports: {} }, fn(module, module.exports), module.exports;
+    return module = { exports: {} }, fn(module, module.exports), module.exports;
 }
 
 var base64 = createCommonjsModule(function (module, exports) {
 /*! http://mths.be/base64 v0.1.0 by @mathias | MIT license */
 (function(root) {
 
-	// Detect free variables `exports`.
-	var freeExports = 'object' == 'object' && exports;
+    // Detect free variables `exports`.
+    var freeExports = 'object' == 'object' && exports;
 
-	// Detect free variable `module`.
-	var freeModule = 'object' == 'object' && module &&
-		module.exports == freeExports && module;
+    // Detect free variable `module`.
+    var freeModule = 'object' == 'object' && module &&
+        module.exports == freeExports && module;
 
-	// Detect free variable `global`, from Node.js or Browserified code, and use
-	// it as `root`.
-	var freeGlobal = typeof commonjsGlobal == 'object' && commonjsGlobal;
-	if (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal) {
-		root = freeGlobal;
-	}
+    // Detect free variable `global`, from Node.js or Browserified code, and use
+    // it as `root`.
+    var freeGlobal = typeof commonjsGlobal == 'object' && commonjsGlobal;
+    if (freeGlobal.global === freeGlobal || freeGlobal.window === freeGlobal) {
+        root = freeGlobal;
+    }
 
-	/*--------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------*/
 
-	var InvalidCharacterError = function(message) {
-		this.message = message;
-	};
-	InvalidCharacterError.prototype = new Error;
-	InvalidCharacterError.prototype.name = 'InvalidCharacterError';
+    var InvalidCharacterError = function(message) {
+        this.message = message;
+    };
+    InvalidCharacterError.prototype = new Error;
+    InvalidCharacterError.prototype.name = 'InvalidCharacterError';
 
-	var error = function(message) {
-		// Note: the error messages used throughout this file match those used by
-		// the native `atob`/`btoa` implementation in Chromium.
-		throw new InvalidCharacterError(message);
-	};
+    var error = function(message) {
+        // Note: the error messages used throughout this file match those used by
+        // the native `atob`/`btoa` implementation in Chromium.
+        throw new InvalidCharacterError(message);
+    };
 
-	var TABLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
-	// http://whatwg.org/html/common-microsyntaxes.html#space-character
-	var REGEX_SPACE_CHARACTERS = /[\t\n\f\r ]/g;
+    var TABLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+    // http://whatwg.org/html/common-microsyntaxes.html#space-character
+    var REGEX_SPACE_CHARACTERS = /[\t\n\f\r ]/g;
 
-	// `decode` is designed to be fully compatible with `atob` as described in the
-	// HTML Standard. http://whatwg.org/html/webappapis.html#dom-windowbase64-atob
-	// The optimized base64-decoding algorithm used is based on @atk’s excellent
-	// implementation. https://gist.github.com/atk/1020396
-	var decode = function(input) {
-		input = String(input)
-			.replace(REGEX_SPACE_CHARACTERS, '');
-		var length = input.length;
-		if (length % 4 == 0) {
-			input = input.replace(/==?$/, '');
-			length = input.length;
-		}
-		if (
-			length % 4 == 1 ||
-			// http://whatwg.org/C#alphanumeric-ascii-characters
-			/[^+a-zA-Z0-9/]/.test(input)
-		) {
-			error(
-				'Invalid character: the string to be decoded is not correctly encoded.'
-			);
-		}
-		var bitCounter = 0;
-		var bitStorage;
-		var buffer;
-		var output = '';
-		var position = -1;
-		while (++position < length) {
-			buffer = TABLE.indexOf(input.charAt(position));
-			bitStorage = bitCounter % 4 ? bitStorage * 64 + buffer : buffer;
-			// Unless this is the first of a group of 4 characters…
-			if (bitCounter++ % 4) {
-				// …convert the first 8 bits to a single ASCII character.
-				output += String.fromCharCode(
-					0xFF & bitStorage >> (-2 * bitCounter & 6)
-				);
-			}
-		}
-		return output;
-	};
+    // `decode` is designed to be fully compatible with `atob` as described in the
+    // HTML Standard. http://whatwg.org/html/webappapis.html#dom-windowbase64-atob
+    // The optimized base64-decoding algorithm used is based on @atk’s excellent
+    // implementation. https://gist.github.com/atk/1020396
+    var decode = function(input) {
+        input = String(input)
+            .replace(REGEX_SPACE_CHARACTERS, '');
+        var length = input.length;
+        if (length % 4 == 0) {
+            input = input.replace(/==?$/, '');
+            length = input.length;
+        }
+        if (
+            length % 4 == 1 ||
+            // http://whatwg.org/C#alphanumeric-ascii-characters
+            /[^+a-zA-Z0-9/]/.test(input)
+        ) {
+            error(
+                'Invalid character: the string to be decoded is not correctly encoded.'
+            );
+        }
+        var bitCounter = 0;
+        var bitStorage;
+        var buffer;
+        var output = '';
+        var position = -1;
+        while (++position < length) {
+            buffer = TABLE.indexOf(input.charAt(position));
+            bitStorage = bitCounter % 4 ? bitStorage * 64 + buffer : buffer;
+            // Unless this is the first of a group of 4 characters…
+            if (bitCounter++ % 4) {
+                // …convert the first 8 bits to a single ASCII character.
+                output += String.fromCharCode(
+                    0xFF & bitStorage >> (-2 * bitCounter & 6)
+                );
+            }
+        }
+        return output;
+    };
 
-	// `encode` is designed to be fully compatible with `btoa` as described in the
-	// HTML Standard: http://whatwg.org/html/webappapis.html#dom-windowbase64-btoa
-	var encode = function(input) {
-		input = String(input);
-		if (/[^\0-\xFF]/.test(input)) {
-			// Note: no need to special-case astral symbols here, as surrogates are
-			// matched, and the input is supposed to only contain ASCII anyway.
-			error(
-				'The string to be encoded contains characters outside of the ' +
-				'Latin1 range.'
-			);
-		}
-		var padding = input.length % 3;
-		var output = '';
-		var position = -1;
-		var a;
-		var b;
-		var c;
-		var buffer;
-		// Make sure any padding is handled outside of the loop.
-		var length = input.length - padding;
+    // `encode` is designed to be fully compatible with `btoa` as described in the
+    // HTML Standard: http://whatwg.org/html/webappapis.html#dom-windowbase64-btoa
+    var encode = function(input) {
+        input = String(input);
+        if (/[^\0-\xFF]/.test(input)) {
+            // Note: no need to special-case astral symbols here, as surrogates are
+            // matched, and the input is supposed to only contain ASCII anyway.
+            error(
+                'The string to be encoded contains characters outside of the ' +
+                'Latin1 range.'
+            );
+        }
+        var padding = input.length % 3;
+        var output = '';
+        var position = -1;
+        var a;
+        var b;
+        var c;
+        var buffer;
+        // Make sure any padding is handled outside of the loop.
+        var length = input.length - padding;
 
-		while (++position < length) {
-			// Read three bytes, i.e. 24 bits.
-			a = input.charCodeAt(position) << 16;
-			b = input.charCodeAt(++position) << 8;
-			c = input.charCodeAt(++position);
-			buffer = a + b + c;
-			// Turn the 24 bits into four chunks of 6 bits each, and append the
-			// matching character for each of them to the output.
-			output += (
-				TABLE.charAt(buffer >> 18 & 0x3F) +
-				TABLE.charAt(buffer >> 12 & 0x3F) +
-				TABLE.charAt(buffer >> 6 & 0x3F) +
-				TABLE.charAt(buffer & 0x3F)
-			);
-		}
+        while (++position < length) {
+            // Read three bytes, i.e. 24 bits.
+            a = input.charCodeAt(position) << 16;
+            b = input.charCodeAt(++position) << 8;
+            c = input.charCodeAt(++position);
+            buffer = a + b + c;
+            // Turn the 24 bits into four chunks of 6 bits each, and append the
+            // matching character for each of them to the output.
+            output += (
+                TABLE.charAt(buffer >> 18 & 0x3F) +
+                TABLE.charAt(buffer >> 12 & 0x3F) +
+                TABLE.charAt(buffer >> 6 & 0x3F) +
+                TABLE.charAt(buffer & 0x3F)
+            );
+        }
 
-		if (padding == 2) {
-			a = input.charCodeAt(position) << 8;
-			b = input.charCodeAt(++position);
-			buffer = a + b;
-			output += (
-				TABLE.charAt(buffer >> 10) +
-				TABLE.charAt((buffer >> 4) & 0x3F) +
-				TABLE.charAt((buffer << 2) & 0x3F) +
-				'='
-			);
-		} else if (padding == 1) {
-			buffer = input.charCodeAt(position);
-			output += (
-				TABLE.charAt(buffer >> 2) +
-				TABLE.charAt((buffer << 4) & 0x3F) +
-				'=='
-			);
-		}
+        if (padding == 2) {
+            a = input.charCodeAt(position) << 8;
+            b = input.charCodeAt(++position);
+            buffer = a + b;
+            output += (
+                TABLE.charAt(buffer >> 10) +
+                TABLE.charAt((buffer >> 4) & 0x3F) +
+                TABLE.charAt((buffer << 2) & 0x3F) +
+                '='
+            );
+        } else if (padding == 1) {
+            buffer = input.charCodeAt(position);
+            output += (
+                TABLE.charAt(buffer >> 2) +
+                TABLE.charAt((buffer << 4) & 0x3F) +
+                '=='
+            );
+        }
 
-		return output;
-	};
+        return output;
+    };
 
-	var base64 = {
-		'encode': encode,
-		'decode': decode,
-		'version': '0.1.0'
-	};
+    var base64 = {
+        'encode': encode,
+        'decode': decode,
+        'version': '0.1.0'
+    };
 
-	// Some AMD build optimizers, like r.js, check for specific condition patterns
-	// like the following:
-	if (
-		typeof undefined == 'function' &&
-		typeof undefined.amd == 'object' &&
-		undefined.amd
-	) {
-		undefined(function() {
-			return base64;
-		});
-	}	else if (freeExports && !freeExports.nodeType) {
-		if (freeModule) { // in Node.js or RingoJS v0.8.0+
-			freeModule.exports = base64;
-		} else { // in Narwhal or RingoJS v0.7.0-
-			for (var key in base64) {
-				base64.hasOwnProperty(key) && (freeExports[key] = base64[key]);
-			}
-		}
-	} else { // in Rhino or a web browser
-		root.base64 = base64;
-	}
+    // Some AMD build optimizers, like r.js, check for specific condition patterns
+    // like the following:
+    if (
+        typeof undefined == 'function' &&
+        typeof undefined.amd == 'object' &&
+        undefined.amd
+    ) {
+        undefined(function() {
+            return base64;
+        });
+    }    else if (freeExports && !freeExports.nodeType) {
+        if (freeModule) { // in Node.js or RingoJS v0.8.0+
+            freeModule.exports = base64;
+        } else { // in Narwhal or RingoJS v0.7.0-
+            for (var key in base64) {
+                base64.hasOwnProperty(key) && (freeExports[key] = base64[key]);
+            }
+        }
+    } else { // in Rhino or a web browser
+        root.base64 = base64;
+    }
 
 }(commonjsGlobal));
 });
@@ -446,17 +445,17 @@ function genBitmapImage (oData) {
   // BITMAPINFOHEADER: http://msdn.microsoft.com/en-us/library/dd183376.aspx
   //
   var biWidth = oData.width;
-  var biHeight	= oData.height;
+  var biHeight    = oData.height;
   var biSizeImage = biWidth * biHeight * 3;
   var bfSize = biSizeImage + 54; // total header size = 54 bytes
 
   //
   //  typedef struct tagBITMAPFILEHEADER {
-  //  	WORD bfType;
-  //  	DWORD bfSize;
-  //  	WORD bfReserved1;
-  //  	WORD bfReserved2;
-  //  	DWORD bfOffBits;
+  //      WORD bfType;
+  //      DWORD bfSize;
+  //      WORD bfReserved1;
+  //      WORD bfReserved2;
+  //      DWORD bfOffBits;
   //  } BITMAPFILEHEADER;
   //
   var BITMAPFILEHEADER = [
@@ -474,17 +473,17 @@ function genBitmapImage (oData) {
 
   //
   //  typedef struct tagBITMAPINFOHEADER {
-  //  	DWORD biSize;
-  //  	LONG  biWidth;
-  //  	LONG  biHeight;
-  //  	WORD  biPlanes;
-  //  	WORD  biBitCount;
-  //  	DWORD biCompression;
-  //  	DWORD biSizeImage;
-  //  	LONG  biXPelsPerMeter;
-  //  	LONG  biYPelsPerMeter;
-  //  	DWORD biClrUsed;
-  //  	DWORD biClrImportant;
+  //      DWORD biSize;
+  //      LONG  biWidth;
+  //      LONG  biHeight;
+  //      WORD  biPlanes;
+  //      WORD  biBitCount;
+  //      DWORD biCompression;
+  //      DWORD biSizeImage;
+  //      LONG  biXPelsPerMeter;
+  //      LONG  biYPelsPerMeter;
+  //      DWORD biClrUsed;
+  //      DWORD biClrImportant;
   //  } BITMAPINFOHEADER, *PBITMAPINFOHEADER;
   //
   var BITMAPINFOHEADER = [
@@ -613,7 +612,7 @@ function methods () {
     }
     isFunction(self.onBeforeDraw) && self.onBeforeDraw(self.ctx, self);
 
-    self.setBoundStyle(); //	设置边界样式
+    self.setBoundStyle(); //    设置边界样式
     self.ctx.draw();
     return self
   };
@@ -870,16 +869,16 @@ function cut () {
   var height = ref.height; if ( height === void 0 ) height = boundHeight;
 
   /**
-	 * 设置边界
-	 * @param imgLeft 图片左上角横坐标值
-	 * @param imgTop 图片左上角纵坐标值
-	 */
+     * 设置边界
+     * @param imgLeft 图片左上角横坐标值
+     * @param imgTop 图片左上角纵坐标值
+     */
   self.outsideBound = function (imgLeft, imgTop) {
     self.imgLeft = imgLeft >= x
       ? x
       : self.scaleWidth + imgLeft - x <= width
         ? x + width - self.scaleWidth
-        :	imgLeft;
+        :    imgLeft;
 
     self.imgTop = imgTop >= y
       ? y
@@ -889,9 +888,9 @@ function cut () {
   };
 
   /**
-	 * 设置边界样式
-	 * @param color	边界颜色
-	 */
+     * 设置边界样式
+     * @param color    边界颜色
+     */
   self.setBoundStyle = function (ref) {
     if ( ref === void 0 ) ref = {};
     var color = ref.color; if ( color === void 0 ) color = '#04b00f';

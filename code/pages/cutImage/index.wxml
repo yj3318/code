@@ -8,7 +8,7 @@
 <view class="cropper-wrapper" hidden="{{!isCutShow}}">
     <import src="../../component/cropImg/cropImg.wxml"/>
     <template is="we-cropper" data="{{...canvasSetting}}"/>
-    <view class="tips">裁剪后图片尺寸为652*372</view>
+    <view class="tips">裁剪后图片尺寸为{{tipsData.w}}*{{tipsData.h}}</view>
     <view class="cropper-buttons">
         <view class="cropper-btn cancel-btn" bindtap="cancelCutImage">取消</view>
         <view class="cropper-btn" bindtap="getCutImage">完成</view>

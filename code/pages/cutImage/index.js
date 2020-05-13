@@ -1,8 +1,10 @@
 const app = getApp() // 小程序对象
 import WeCropper from '../../component/cropImg/cropImg' // 导入裁剪方法
 const device = wx.getSystemInfoSync()
-const width = device.windowWidth
-const height = device.windowHeight - 100
+const width = device.windowWidth // canvas宽度，单位px
+const height = device.windowHeight - 100 // canvas高度，单位px
+const cutW = 652 // 裁剪区宽度，单位rpx
+const cutH = 372 // 裁剪区高度，单位rpx
 Page({
     pageName: 'cutImage',
     defaultTitle: '裁剪图片效果',
@@ -14,7 +16,12 @@ Page({
             id: 'cropper',
             width,
             height,
-        }
+        },
+        // 宽高说明
+        tipsData: {
+            w: cutW,
+            h: cutH,
+        },
     },
     // 裁剪配置
     cropperOpt: {
@@ -23,11 +30,12 @@ Page({
         height,
         scale: 2.5,
         zoom: 8,
+        // 裁剪区载设置
         cut: {
-            x: (width - 326) / 2,
-            y: (height - 100 - 186) / 2,
-            width: 326,
-            height: 186,
+            x: (width - cutW * app.commonJs.systemInfo.rpx2px) / 2,
+            y: (height - cutH * app.commonJs.systemInfo.rpx2px) / 2,
+            width: cutW * app.commonJs.systemInfo.rpx2px,
+            height: cutH * app.commonJs.systemInfo.rpx2px,
         }
     },
     onLoad (params) {
