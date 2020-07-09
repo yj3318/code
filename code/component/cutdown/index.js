@@ -37,8 +37,12 @@ class CutdownPannel {
             if (times && this.$this) {
                 this._stop()
                 // 满足倒计时条件，计时倒计时显示数字
+                let key = this.dataName + '[' + sort + ']'
+                if (!Number(sort)) {
+                    key = this.dataName + '.' + sort
+                }
                 this.$this.setData({
-                    [this.dataName + '[' + sort + ']']: this._computingTime({time: times}),
+                    [key]: this._computingTime({time: times}),
                 })
                 this._start()
             } else {
