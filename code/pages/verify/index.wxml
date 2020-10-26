@@ -1,0 +1,11 @@
+<view class="verify-pic">
+    <view class="puzzle" style="width:{{targetData.width}}px;height:{{targetData.height}}px;transform:translateX({{left}}px) translateY({{top}}px);"></view>
+    <view class="target-area" style="width:{{targetData.width}}px;height:{{targetData.height}}px;transform:translateX({{targetData.x}}px) translateY({{targetData.y}}px);"></view>
+</view>
+<movable-area class="verify-content" id="j-verifyContent">
+    拖动滑块验证
+    <movable-view class='verify-box' id="j-verifyBox" friction="{{100}}" direction="horizontal" x="{{defaultX}}" damping="500" bindchange="drag" bindtouchend="dragOver">
+        <view class='movable-icon'></view>
+    </movable-view>
+</movable-area>
+<view class="time">拖拽时间：{{time}}秒</view>

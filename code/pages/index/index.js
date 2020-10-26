@@ -45,6 +45,10 @@ Page({
                 name: '图片裁剪',
                 url: '/pages/cutImage/index',
             },
+            {
+                name: '拖拽验证码',
+                url: '/pages/verify/index',
+            },
         ],
     },
 })

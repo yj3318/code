@@ -1,0 +1,52 @@
+/* 验证码图片区域 */
+.verify-pic {
+    display: block;
+    margin: 0 auto;
+    width: 600rpx;
+    height: 177rpx;
+    background: url(http://img63.ddimg.cn/upload_img/00774/11/xiaochengxujiaodiantu-1242-366-1603090299.jpg) center center no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.verify-pic .puzzle {
+    display: block;
+    position: absolute;
+    background-color: #0000ff;
+    z-index: 2;
+}
+.verify-pic .target-area {
+    display: block;
+    position: absolute;
+    background-color: #00ff00;
+    z-index: 1;
+}
+/* 滑动区域 */
+.verify-content {
+    margin: 0 auto;
+    margin-top: 10rpx;
+    width: 600rpx;
+    height: 90rpx;
+    background: #ededed;
+    color: #666666;
+    border-radius: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:16px;
+}
+.verify-box {
+    width: 120rpx;
+    height: 90rpx;
+    background-color: #fc5b13;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movable-icon {
+    width: 60rpx;
+    height: 60rpx;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACVElEQVR4Xu3aLY/VQBTG8f8TVgErFk2wGDyCVbwm4PgQJDgQJKt2eRFkNyTgcXwGDLsECwaFIQGHIgENqEOadJPmht5OOzOlZ9ra3p47z29O78t0xMwPzTw/C8DSATMXWG6BmTfA8iG43AIht4CZPQAeA1+AO5I+hFy37jVmtgm8BC4DB5KexdYccn1nB5jZGeA7sFG/wR/gpqR3Q97w+BozewTsNmq8kHQ/puaQa0MALgCfVopHI5jZIXBtpe7oCCEAJ4BqsFWrNo8oBDO7Bbz+x6yNitAJUA3QzE4Cb4DtxAj3gOf/EyEIoGSEYIBSEXoBlIjQG6A0hEEAJSEMBigFIQqgBIRoAO8ISQA8IyQDyIywAzzN8YsxKYBHhOQA3hCyAHhCyAbgBSErgAeE7AANhGoJ7WLi9YTob4dRAGqE08DbFoRLkj4OWdMzszaEXUlPumqOBtCBcCjpRtdg2863IPwCzkn6sa7u2ABtS2tHkq4nBvgNnJX0cxIAHeuKOW6BPUnVs4y1xygdkHFRdfofglMOX7VG1g6YevisAB7CZwPwEj4LgKfwyQG8hU8KkDF81ueHSb4FvIZP0gGew0cDeA8fBVBC+MEApYQfBFBS+N4ApYXvBVBi+GCAUsP3Aai2s1Xb2prHPLbJmdl54HPK8PUC6RFwdaXuqHsEgzrAzLaAb8CperBRM38c2Mz2gIcNgNHDBwHUs3UbeAV8Be5Ket+12Nh1vrFZ+gqwP9nN0l1BvJ9P8m/QM8IC4Hn2Uox96YAUip5rLB3gefZSjH32HfAX1fX6UCbefU0AAAAASUVORK5CYII=) no-repeat center center;
+    background-size: 100% 100%;
+}

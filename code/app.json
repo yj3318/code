@@ -11,7 +11,8 @@
         "pages/popAnimation/index",
         "pages/cutdown/index",
         "pages/navigationBar/index",
-        "pages/cutImage/index"
+        "pages/cutImage/index",
+        "pages/verify/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
