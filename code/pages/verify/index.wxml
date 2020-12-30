@@ -3,7 +3,8 @@
     <view class="target-area" style="width:{{targetData.width}}px;height:{{targetData.height}}px;transform:translateX({{targetData.x}}px) translateY({{targetData.y}}px);"></view>
 </view>
 <movable-area class="verify-content" id="j-verifyContent">
-    拖动滑块验证
+    <view class="verify-content-text">拖动滑块验证</view>
+    <view class="verify-content-bg" style="width:{{left + 10}}px;"></view>
     <movable-view class='verify-box' id="j-verifyBox" friction="{{100}}" direction="horizontal" x="{{defaultX}}" damping="500" bindchange="drag" bindtouchend="dragOver">
         <view class='movable-icon'></view>
     </movable-view>

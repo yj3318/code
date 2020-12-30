@@ -18,3 +18,6 @@
     border-radius: 8rpx;
     margin-top: 20rpx;
 }
+.jump:last-child {
+    margin-bottom: 20rpx;
+}
