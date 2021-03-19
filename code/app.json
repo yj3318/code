@@ -14,6 +14,14 @@
         "pages/cutImage/index",
         "pages/verify/index"
     ],
+    "subPackages": [
+        {
+            "root": "pages/imAnimate/",
+            "pages": [
+                "index"
+            ]
+        }
+    ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",

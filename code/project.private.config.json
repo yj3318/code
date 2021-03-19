@@ -1,0 +1,57 @@
+{
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "id": 0,
+                    "name": "im",
+                    "pathName": "pages/im/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "canvas翻页效果",
+                    "pathName": "pages/canvasBook/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "倒计时组件",
+                    "pathName": "pages/cutdown/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "自定义导航组件",
+                    "pathName": "pages/navigationBar/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "图片裁剪",
+                    "pathName": "pages/cutImage/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "聊天动画",
+                    "pathName": "pages/imAnimate/index",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

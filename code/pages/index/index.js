@@ -49,6 +49,10 @@ Page({
                 name: '拖拽验证码',
                 url: '/pages/verify/index',
             },
+            {
+                name: '聊天动画',
+                url: '/pages/imAnimate/index',
+            },
         ],
     },
 })

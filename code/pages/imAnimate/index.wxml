@@ -1,0 +1,37 @@
+<view class="im-animate" style="background-image:{{skinData.bg.path ? 'url(' + skinData.bg.path + ')' : 'none'}};min-height:{{skinData.bg.windowH}}px;">
+    <!-- 聊天记录开始 -->
+    <view class="im-data-list">
+    <view class="im-data-li {{item.type}} {{item.animate ? 'animate' : ''}}" wx:for="{{imData}}" wx:key="index" wx:if="{{item.text}}">
+            <!-- 头像开始 -->
+            <view class="avatar-wrap">
+                <image src="{{item.type !== 'my' ? author.avatar : my.avatar}}" class="img" mode="scallToFill" wx:if="{{item.type !== 'my' || my.avatar}}" />
+                <open-data type="userAvatarUrl" class="img" wx:else></open-data>
+            </view>
+            <!-- 头像结束 -->
+            <!-- 右侧开始 -->
+            <view class="right">
+                <!-- 昵称开始 -->
+                <text class="name" wx:if="{{item.type !== 'my' || my.nickName}}">{{item.type !== 'my' ? author.nickName : my.nickName}}</text>
+                <open-data type="userNickName" lang="zh_CN" class="name" wx:else></open-data>
+                <!-- 昵称结束 -->
+                <!-- 聊天内容开始 -->
+                <text class="text">{{item.text}}</text>
+                <!-- 聊天内容结束 -->
+            </view>
+            <!-- 右侧结束 -->
+        </view>
+    </view>
+    <!-- 聊天记录结束 -->
+
+    <!-- 按钮区开始 -->
+    <view class="im-animate-btn">
+        <view class="again {{againStatus ? '' : 'forbid'}}" bindtap="playAgain">想再被夸一次</view>
+    </view>
+    <!-- 按钮区结束 -->
+
+    <!-- 底部LOGO开始 -->
+    <view class="im-animate-logo">
+        <image src="https://img3m1.ddimg.cn/40/27/27922891-1_h_5.jpg" mode="scaleToFill" class="img" />
+    </view>
+    <!-- 底部LOGO结束 -->
+</view>

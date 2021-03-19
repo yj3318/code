@@ -1,0 +1,153 @@
+page {
+    min-height: 100%;
+}
+
+.im-animate {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+}
+.im-animate .im-data-list {
+    display: block;
+    padding: 30rpx 20rpx 0 20rpx;
+}
+.im-animate .im-data-list .im-data-li {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 30rpx;
+    visibility: hidden;
+    position: relative;
+    padding-right: 92rpx;
+}
+.im-animate .im-data-list .im-data-li.my {
+    padding-left: 92rpx;
+    padding-right: 0;
+}
+.im-animate .im-data-list .im-data-li .avatar-wrap {
+    display: block;
+    width: 74rpx;
+    height: 74rpx;
+    position: relative;
+    float: left;
+}
+.im-animate .im-data-list .im-data-li.my .avatar-wrap {
+    overflow: hidden;
+    border-radius: 74rpx;
+    float: right;
+}
+.im-animate .im-data-list .im-data-li .avatar-wrap .img {
+    display: block;
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 74rpx;
+}
+.im-animate .im-data-list .im-data-li .right {
+    display: block;
+    float: left;
+    padding-left: 18rpx;
+    max-width: 508rpx;
+}
+.im-animate .im-data-list .im-data-li.my .right {
+    float: right;
+    padding-left: 0;
+    padding-right: 18rpx;
+}
+.im-animate .im-data-list .im-data-li .right .name {
+    display: block;
+    color: #666666;
+    font-size: 22rpx;
+    line-height: 26rpx;
+    height: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: 6rpx;
+}
+.im-animate .im-data-list .im-data-li.my .right .name {
+    text-align: right;
+}
+.im-animate .im-data-list .im-data-li .right .text {
+    display: block;
+    word-break: break-all;
+    background-color: #ffffff;
+    border-radius: 8rpx 20rpx 20rpx 20rpx;
+    padding: 14rpx 25rpx;
+    color: #141414;
+    font-size: 30rpx;
+    line-height: 48rpx;
+}
+.im-animate .im-data-list .im-data-li.my .right .text {
+    background-color: #ff9b36;
+    border-radius: 20rpx 8rpx 20rpx 20rpx;
+    color: #ffffff;
+}
+
+/* 聊天动画 */
+.im-animate .im-data-list .im-data-li.animate {
+    visibility: visible;
+    top: 100rpx;
+    animation: im 0.3s ease-in;
+    -webkit-animation: im 0.3s ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes im {
+    from {
+        top: 100rpx;
+    }
+    to {
+        top: 0;
+    }
+}
+@-webkit-keyframes im {
+    from {
+        top: 100rpx;
+    }
+    to {
+        top: 0;
+    }
+}
+
+/* 按钮区 */
+.im-animate .im-animate-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150rpx;
+    position: absolute;
+    bottom: 97rpx;
+    left: 0;
+}
+.im-animate .im-animate-btn .again {
+    display: block;
+    width: 305rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    font-size: 34rpx;
+    border-radius: 90rpx;
+    background-color: #f76128;
+}
+.im-animate .im-animate-btn .again.forbid {
+    opacity: 0.5;
+}
+
+/* 底部logo */
+.im-animate .im-animate-logo {
+    display: block;
+    width: 100%;
+    height: 68rpx;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.im-animate .im-animate-logo .img {
+    display: block;
+    width: 268rpx;
+    height: 68rpx;
+    margin: 0 auto;
+}
